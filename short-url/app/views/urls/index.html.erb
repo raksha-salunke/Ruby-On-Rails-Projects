@@ -1,0 +1,17 @@
+<h2>Url List</h2>
+<div class="w3-container">
+  <div class="w3-ul w3-card" style="width:80%">
+    <% if @urls.size > 0 %>
+      <% @urls.each do |url| %>
+        <li class="w3-display-container">
+          <%= url.name %>
+          <%= link_to url.short_url, url.long_url %>
+        </li>
+      <% end %>
+    <% end %>
+  </div><br>
+  <%= link_to 'Create a link', new_url_path(@urls.first.user), class:'button'%>
+  <%= link_to 'Back', root_path, class:'button'%>
+
+
+</div>

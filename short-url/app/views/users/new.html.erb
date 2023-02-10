@@ -1,0 +1,7 @@
+<div class="form_content">
+  <%= form_with model: @user do |form| %>
+    <%= form.label :'Please enter your username' %><br><br>
+    <%= form.text_field :username %><br><br>
+    <%= form.submit %>
+<% end %>
+</div>

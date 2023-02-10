@@ -1,0 +1,19 @@
+<h2>Users List</h2>
+<% if @users.size > 0 %>
+<div class="w3-container">
+    <div class="w3-ul w3-card" style="width:80%">
+        <% @users.each do |user| %>
+          <li class="w3-display-container">
+            <%= user.username %>
+            <%= link_to 'Create a link', new_url_path(user) %>
+          </li>
+        <% end %>
+    </div><br>
+</div>
+<% else %>
+  <h3>No Users!! create a User</h3>
+<% end %>
+<div class="User-button">
+<%= link_to 'Create User', new_user_path, class: 'button' %>
+</div>
+

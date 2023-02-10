@@ -1,0 +1,12 @@
+<%= flash[:error] %>
+<div class="form_content">
+  <p><b><%= @user.username %></b> Create Long Url </p>
+  <%= form_with model: @url do |form| %>
+  <%= form.label :'name of url' %><br>
+  <%= form.text_field :name %><br><br>
+  <%= form.label :'input url you want to shorten:' %><br>
+  <%= form.text_field :long_url %><br><br>
+  <%= form.hidden_field :user_id, value: @user.id %>
+  <%= form.submit %>
+<% end %>
+</div>
